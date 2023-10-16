@@ -1,6 +1,8 @@
 function fetchBooks() {
-  // To pass the tests, don't forget to return your fetch!
-  
+  // Make a fetch request to the Game of Thrones API
+  fetch('https://anapioficeandfire.com/api/books')
+    .then(response => response.json())
+    .then(data => renderBooks(data))
 }
 
 function renderBooks(books) {
